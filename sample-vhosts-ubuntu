@@ -10,6 +10,7 @@ Sample1-------------------------------
    #ServerAdmin webmaster@localhost
     ServerName www.ilmultechmania.in.net
     ServerAlias www.ilmultechmania.in.net
+   #ServerAlias www.ilmultechmania.in.net ww2.ilmultechmania.in.net
     DocumentRoot /var/www/html
 
     ErrorLog ${APACHE_LOG_DIR}/error.log_www.ilmultechmania.in.net
@@ -43,6 +44,7 @@ Sample2-------------------------------
    #ServerAdmin webmaster@localhost
     ServerName ww2.ilmultechmania.in.net
     ServerAlias ww2.ilmultechmania.in.net
+   #ServerAlias ww2.ilmultechmania.in.net www.ilmultechmania.in.net
     DocumentRoot /var/www/html
 
     ErrorLog ${APACHE_LOG_DIR}/error.log_ww2.ilmultechmania.in.net
