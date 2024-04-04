@@ -1,0 +1,56 @@
+Sample1-------------------------------
+<VirtualHost *:80>
+   ServerName www.ilmultechmania.in.net
+   Redirect permanent / https://www.ilmultechmania.in.net/
+</VirtualHost>
+
+<IfModule mod_ssl.c>
+   <VirtualHost *:443>
+
+   #ServerAdmin webmaster@localhost
+    ServerName www.ilmultechmania.in.net
+    ServerAlias www.ilmultechmania.in.net
+    DocumentRoot /var/www/html
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log_www.ilmultechmania.in.net
+    #TransferLog logs/ssl_access_log_www.ilmultechmania.in.net
+    CustomLog ${APACHE_LOG_DIR}/custom.log_www.ilmultechmania.in.net combined
+
+    SSLEngine on
+    SSLCertificateFile /etc/apache2/ssl-certs/www.ilmultechmania.in.net-certificate.crt
+    SSLCertificateKeyFile /etc/apache2/ssl-certs/www.ilmultechmania.in.key
+    SSLCertificateChainFile /etc/apache2/ssl-certs/www.ilmultechmania.in.net-ca-bundle.crt
+
+
+
+    <FilesMatch "\.(cgi|shtml|phtml|php)$">
+		    SSLOptions +StdEnvVars
+    </FilesMatch>
+    <Directory /usr/lib/cgi-bin>
+		    SSLOptions +StdEnvVars
+    </Directory>
+
+    </VirtualHost>
+</IfModule>
+
+Sample2-------------------------------
+<VirtualHost *:80>
+   ServerName ww2.ilmultechmania.in.net
+   Redirect permanent / https://ww2.ilmultechmania.in.net/
+</VirtualHost>
+
+<VirtualHost *:443>
+   #ServerAdmin webmaster@localhost
+    ServerName ww2.ilmultechmania.in.net
+    ServerAlias ww2.ilmultechmania.in.net
+    DocumentRoot /var/www/html
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log_ww2.ilmultechmania.in.net
+    #TransferLog logs/ssl_access_log_ww2.ilmultechmania.in.net
+    CustomLog ${APACHE_LOG_DIR}/custom.log_ww2.ilmultechmania.in.net combined
+
+    SSLEngine on
+    SSLCertificateFile /etc/apache2/ssl-certs/ww2_ilmultechmania_in_net_certificate.crt
+    SSLCertificateKeyFile /etc/apache2/ssl-certs/ww2_ilmultechmania_in_net.key
+    SSLCertificateChainFile /etc/apache2/ssl-certs/ww2_ilmultechmania_in_net_ca_bundle.crt
+</VirtualHost>
