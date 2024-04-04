@@ -1,0 +1,43 @@
+Few Common commands -------------------------------
+### RHEL/Centos
+$ apachectl configtest
+$ chmod -R 777 /tmp/ilmultechmania.in.net
+$ yum install httpd -y
+$ yum install -y mod_ssl
+$ systemctl status|reload|start|Stop|restart|enable httpd
+$ netstat -ntulp
+$ curl ifconfig.me
+$ grep -i -r "SSLCertificateFile" /etc/httpd/
+
+##### Ubuntu
+$ sudo apt install apache2 openssl
+$ a2enmod ssl
+$ sudo systemctl status apache2
+$ ls /etc/apache2
+$ grep -i -r "SSLCertificateFile" /etc/apache2/
+$ a2ensite ilmultechmania.in.net.conf
+$ a2dissite ilmultechmania.in.net.conf
+$ apachectl configtest
+$ apache2ctl -S
+$ a2query -s
+$ apache2ctl -t -D DUMP_VHOSTS
+$ apache2ctl -S | grep -o -E 'alias (.*)|(namevhost|server) (.*)\s' | cut -d ' ' -f 2
+
+
+References:
+https://www.digicert.com/kb/csr-ssl-installation/apache-openssl.htm
+https://stackoverflow.com/questions/16200501/how-can-i-automatically-redirect-http-to-https-on-apache-servers
+https://serverfault.com/questions/744960/configuring-ssl-with-virtual-hosts-under-apache-and-centos
+https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-22-04
+https://www.digicert.com/easy-csr/openssl.htm
+https://myorders.bigrock.in/orders/manage/ilmultechmania.in.net/domain
+https://help.zerossl.com/hc/en-us/articles/360058295854-Installing-SSL-Certificate-on-Apache
+https://help.zerossl.com/hc/en-us/articles/360058295094-Before-Installation
+
+Ref: https://help.zerossl.com/hc/en-us/articles/360060120373-Installing-SSL-Certificate-on-Ubuntu
+https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04
+https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-22-04
+https://www.domainsatretail.com/blog/security/simplest-way-use-ssl-certificates-amazon-ec2-ubuntu-server/
+https://help.zerossl.com/hc/en-us/articles/360058295854-Installing-SSL-Certificate-on-Apache
+
+
