@@ -22,6 +22,7 @@ $ apache2ctl -S
 $ a2query -s
 $ apache2ctl -t -D DUMP_VHOSTS
 $ apache2ctl -S | grep -o -E 'alias (.*)|(namevhost|server) (.*)\s' | cut -d ' ' -f 2
+$ sudo nano /etc/hosts
 
 
 References:
@@ -39,5 +40,8 @@ https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-s
 https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-22-04
 https://www.domainsatretail.com/blog/security/simplest-way-use-ssl-certificates-amazon-ec2-ubuntu-server/
 https://help.zerossl.com/hc/en-us/articles/360058295854-Installing-SSL-Certificate-on-Apache
-
+https://ubuntu.com/server/docs/how-to-configure-apache2-settings
+https://www.arubacloud.com/tutorial/how-to-enable-https-protocol-with-apache-2-on-ubuntu-20-04.aspx
+https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-18-04-quickstart
+https://medium.com/techvblogs/how-to-manage-and-use-apache-virtual-hosts-in-ubuntu-792cfc29368
 
